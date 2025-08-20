@@ -1,5 +1,7 @@
 package com.formlogin.userstorage.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,7 +15,7 @@ public class AppUser {
 	private Long id;
 	private String username;
 	private String password;
-	private String roles;
+	private List<String> roles;
 	
 	public Long getId() {
 		return id;
@@ -33,12 +35,13 @@ public class AppUser {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRoles() {
+	public List<String> getRoles() {
 		return roles;
 	}
-	public void setRoles(String roles) {
+	public void setRoles(List<String> roles) {
 		this.roles = roles;
 	}
+	
 	
 	
 }

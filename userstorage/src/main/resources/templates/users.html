@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<h2>Create User</h2>
+<form th:action="@{/public/users}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" /><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" /><br><br>
+
+    <label>Roles:</label><br>
+    <input type="checkbox" name="roles" value="ROLE_USER"> User<br>
+    <input type="checkbox" name="roles" value="ROLE_ADMIN"> Admin<br><br>
+
+    <button type="submit">Create User</button>
+</form>
+</body>
+</html>
